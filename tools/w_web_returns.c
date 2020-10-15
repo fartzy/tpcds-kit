@@ -210,15 +210,15 @@ int pr_w_web_returns(void *row)
 		print_json_schema_col(WEB_RETURNS, "WR_REASON_SK", "STRING");
 		print_json_schema_col(WEB_RETURNS, "WR_ORDER_NUMBER", "STRING");
 		print_json_schema_col(WEB_RETURNS, "WR_PRICING_QUANTITY", "INT");
-		print_json_schema_col(WEB_RETURNS, "WR_PRICING_NET_PAID", "DECIMAL(7,2)");
-		print_json_schema_col(WEB_RETURNS, "WR_PRICING_EXT_TAX", "DECIMAL(7,2)");
-		print_json_schema_col(WEB_RETURNS, "WR_PRICING_NET_PAID_INC_TAX", "DECIMAL(7,2)");
-		print_json_schema_col(WEB_RETURNS, "WR_PRICING_FEE", "DECIMAL(7,2)");
-		print_json_schema_col(WEB_RETURNS, "WR_PRICING_EXT_SHIP_COST", "DECIMAL(7,2)");
-		print_json_schema_col(WEB_RETURNS, "WR_PRICING_REFUNDED_CASH", "DECIMAL(7,2)");
-		print_json_schema_col(WEB_RETURNS, "WR_PRICING_REVERSED_CHARGE", "DECIMAL(7,2)");
-		print_json_schema_col(WEB_RETURNS, "WR_PRICING_STORE_CREDIT", "DECIMAL(7,2)");
-		print_json_schema_end(WEB_RETURNS, "WR_PRICING_NET_LOSS", "DECIMAL(7,2)");
+		print_json_schema_col(WEB_RETURNS, "WR_PRICING_NET_PAID", "DECIMAL (7,2)");
+		print_json_schema_col(WEB_RETURNS, "WR_PRICING_EXT_TAX", "DECIMAL (7,2)");
+		print_json_schema_col(WEB_RETURNS, "WR_PRICING_NET_PAID_INC_TAX", "DECIMAL (7,2)");
+		print_json_schema_col(WEB_RETURNS, "WR_PRICING_FEE", "DECIMAL (7,2)");
+		print_json_schema_col(WEB_RETURNS, "WR_PRICING_EXT_SHIP_COST", "DECIMAL (7,2)");
+		print_json_schema_col(WEB_RETURNS, "WR_PRICING_REFUNDED_CASH", "DECIMAL (7,2)");
+		print_json_schema_col(WEB_RETURNS, "WR_PRICING_REVERSED_CHARGE", "DECIMAL (7,2)");
+		print_json_schema_col(WEB_RETURNS, "WR_PRICING_STORE_CREDIT", "DECIMAL (7,2)");
+		print_json_schema_end(WEB_RETURNS, "WR_PRICING_NET_LOSS", "DECIMAL (7,2)");
 	}
 	SCHEMA_W = 1;
 

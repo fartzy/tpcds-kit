@@ -274,8 +274,8 @@ int pr_w_item(void *row)
 		print_json_schema_col(ITEM, "I_REC_START_DATE_ID", "DATE");
 		print_json_schema_col(ITEM, "I_REC_END_DATE_ID", "DATE");
 		print_json_schema_col(ITEM, "I_ITEM_DESC", "STRING");
-		print_json_schema_col(ITEM, "I_CURRENT_PRICE", "DECIMAL(7,2)");
-		print_json_schema_col(ITEM, "I_WHOLESALE_COST", "DECIMAL(7,2)");
+		print_json_schema_col(ITEM, "I_CURRENT_PRICE", "DECIMAL (7,2)");
+		print_json_schema_col(ITEM, "I_WHOLESALE_COST", "DECIMAL (7,2)");
 		print_json_schema_col(ITEM, "I_BRAND_ID", "INT");
 		print_json_schema_col(ITEM, "I_BRAND", "STRING");
 		print_json_schema_col(ITEM, "I_CLASS_ID", "INT");

@@ -303,7 +303,7 @@ int pr_w_store(void *row)
 		print_json_schema_col(STORE, "W_STORE_ADDRESS_ZIP", "STRING");
 		print_json_schema_col(STORE, "W_STORE_ADDRESS_COUNTRY", "STRING");
 		print_json_schema_col(STORE, "W_STORE_ADDRESS_GMT_OFFSET", "INT");
-		print_json_schema_end(STORE, "W_STORE_TAX_PERCENTAGE", "DECIMAL(7,2)");
+		print_json_schema_end(STORE, "W_STORE_TAX_PERCENTAGE", "DECIMAL (7,2)");
 	}
 	SCHEMA_W = 1;
 

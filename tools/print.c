@@ -691,6 +691,7 @@ void print_json_schema_start(int tbl)
 {
 	int bIsVerbose = is_set("VERBOSE") && !is_set("QUIET");
 	char filepath[256];
+	char writebuf[256];
 	char *baseDirPath = malloc(strlen(get_str("DIR")) + 8);
 
 	int fStatus;
@@ -727,9 +728,6 @@ void print_json_schema_start(int tbl)
 
 	tdef *pTdef = getSimpleTdefsByNumber(tbl);
 
-	/* write buffer memory allocation */
-	char *writebuf = malloc(12 + strlen(pTdef->name) + 16 + 1);
-
 	/* fill the write buffer */
 	strcpy(writebuf, "{\"name\" : \"");
 	strcat(writebuf, pTdef->name);
@@ -741,17 +739,16 @@ void print_json_schema_start(int tbl)
 
 	/* write the buffer to the schema file and free the buffer memory*/
 	fputs(writebuf, fpSchemaOutfile);
-	free(writebuf);
 }
 
 void print_json_schema_col(int tbl, char *colName, char *colType)
 {
+	char writebuf[256];
 	tdef *pTdef = getSimpleTdefsByNumber(tbl);
 
 	/* write buffer memory allocation */
 	size_t colNameLen = strlen(colName);
 	size_t colTypeLen = strlen(colType);
-	char *writebuf = malloc(colNameLen + colTypeLen + 6);
 
 	/* fill the write buffer */
 	sprintf(writebuf, "%s%s%s%s%s",
@@ -762,7 +759,6 @@ void print_json_schema_col(int tbl, char *colName, char *colType)
 			"\", ");
 
 	fputs(writebuf, fpSchemaOutfile);
-	free(writebuf);
 }
 void print_json_schema_end(int tbl, char *colName, char *colType)
 {

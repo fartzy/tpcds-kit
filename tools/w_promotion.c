@@ -188,7 +188,7 @@ int pr_w_promotion(void *row)
 		print_json_schema_col(PROMOTION, "P_START_DATE_ID", "DATE");
 		print_json_schema_col(PROMOTION, "P_END_DATE_ID", "DATE");
 		print_json_schema_col(PROMOTION, "P_ITEM_SK", "STRING");
-		print_json_schema_col(PROMOTION, "P_COST", "DECIMAL(7,2)");
+		print_json_schema_col(PROMOTION, "P_COST", "DECIMAL (7,2)");
 		print_json_schema_col(PROMOTION, "P_RESPONSE_TARGET", "INT");
 		print_json_schema_col(PROMOTION, "P_PROMO_NAME", "STRING");
 		print_json_schema_col(PROMOTION, "I_BRAND", "STRING");

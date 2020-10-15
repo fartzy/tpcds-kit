@@ -304,7 +304,7 @@ int pr_w_call_center(void *row)
 		print_json_schema_col(CALL_CENTER, "CC_COMPANY", "INT");
 		print_json_schema_col(CALL_CENTER, "CC_COMPANY_NAME", "STRING");
 		print_json_schema_col(CALL_CENTER, "CC_ADDRESS", "STRING");
-		print_json_schema_end(CALL_CENTER, "CC_TAX_PERCENTAGE", "DECIMAL(7,2)");
+		print_json_schema_end(CALL_CENTER, "CC_TAX_PERCENTAGE", "DECIMAL (7,2)");
 	}
 	SCHEMA_W = 1;
 
