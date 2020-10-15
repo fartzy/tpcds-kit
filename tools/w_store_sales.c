@@ -214,18 +214,18 @@ int pr_w_store_sales(void *row)
 		print_json_schema_col(STORE_SALES, "SS_SOLD_PROMO_SK", "STRING");
 		print_json_schema_col(STORE_SALES, "SR_TICKET_NUMBER", "STRING");
 		print_json_schema_col(STORE_SALES, "SR_PRICING_QUANTITY", "INT");
-		print_json_schema_col(STORE_SALES, "SS_PRICING_WHOLESALE_COST", "DECIMAL(7,2)");
-		print_json_schema_col(STORE_SALES, "SS_PRICING_LIST_PRICE", "DECIMAL(7,2)");
-		print_json_schema_col(STORE_SALES, "SS_PRICING_SALES_PRICE", "DECIMAL(7,2)");
-		print_json_schema_col(STORE_SALES, "SS_PRICING_COUPON_AMT", "DECIMAL(7,2)");
-		print_json_schema_col(STORE_SALES, "SS_PRICING_EXT_SALES_PRICE", "DECIMAL(7,2)");
-		print_json_schema_col(STORE_SALES, "SS_PRICING_EXT_WHOLESALE_COST", "DECIMAL(7,2)");
-		print_json_schema_col(STORE_SALES, "SS_PRICING_EXT_LIST_PRICE", "DECIMAL(7,2)");
-		print_json_schema_end(STORE_SALES, "SS_PRICING_EXT_TAX", "DECIMAL(7,2)");
-		print_json_schema_col(STORE_SALES, "SS_PRICING_COUPON_AMT", "DECIMAL(7,2)");
-		print_json_schema_col(STORE_SALES, "SS_PRICING_NET_PAID", "DECIMAL(7,2)");
-		print_json_schema_col(STORE_SALES, "SS_PRICING_NET_PAID_INC_TAX", "DECIMAL(7,2)");
-		print_json_schema_end(STORE_SALES, "SS_PRICING_NET_PROFIT", "DECIMAL(7,2)");
+		print_json_schema_col(STORE_SALES, "SS_PRICING_WHOLESALE_COST", "DECIMAL (7,2)");
+		print_json_schema_col(STORE_SALES, "SS_PRICING_LIST_PRICE", "DECIMAL (7,2)");
+		print_json_schema_col(STORE_SALES, "SS_PRICING_SALES_PRICE", "DECIMAL (7,2)");
+		print_json_schema_col(STORE_SALES, "SS_PRICING_COUPON_AMT", "DECIMAL (7,2)");
+		print_json_schema_col(STORE_SALES, "SS_PRICING_EXT_SALES_PRICE", "DECIMAL (7,2)");
+		print_json_schema_col(STORE_SALES, "SS_PRICING_EXT_WHOLESALE_COST", "DECIMAL (7,2)");
+		print_json_schema_col(STORE_SALES, "SS_PRICING_EXT_LIST_PRICE", "DECIMAL (7,2)");
+		print_json_schema_end(STORE_SALES, "SS_PRICING_EXT_TAX", "DECIMAL (7,2)");
+		print_json_schema_col(STORE_SALES, "SS_PRICING_COUPON_AMT", "DECIMAL (7,2)");
+		print_json_schema_col(STORE_SALES, "SS_PRICING_NET_PAID", "DECIMAL (7,2)");
+		print_json_schema_col(STORE_SALES, "SS_PRICING_NET_PAID_INC_TAX", "DECIMAL (7,2)");
+		print_json_schema_end(STORE_SALES, "SS_PRICING_NET_PROFIT", "DECIMAL (7,2)");
 	}
 	SCHEMA_W = 1;
 

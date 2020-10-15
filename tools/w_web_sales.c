@@ -309,20 +309,20 @@ int pr_w_web_sales(void *row)
 		print_json_schema_col(WEB_SALES, "WS_PROMO_SK", "STRING");
 		print_json_schema_col(WEB_SALES, "WS_ORDER_NUMBER", "STRING");
 		print_json_schema_col(WEB_SALES, "WS_PRICING_QUANTITY", "INT");
-		print_json_schema_col(WEB_SALES, "WS_PRICING_WHOLESALE_COST", "DECIMAL(7,2)");
-		print_json_schema_col(WEB_SALES, "WS_PRICING_LIST_PRICE", "DECIMAL(7,2)");
-		print_json_schema_col(WEB_SALES, "WS_PRICING_SALES_PRICE", "DECIMAL(7,2)");
-		print_json_schema_col(WEB_SALES, "WS_PRICING_EXT_DISCOUNT_AMT", "DECIMAL(7,2)");
-		print_json_schema_col(WEB_SALES, "WS_PRICING_EXT_SALES_PRICE", "DECIMAL(7,2)");
-		print_json_schema_col(WEB_SALES, "WS_PRICING_EXT_WHOLESALE_COST", "DECIMAL(7,2)");
-		print_json_schema_col(WEB_SALES, "WS_PRICING_EXT_LIST_PRICE", "DECIMAL(7,2)");
-		print_json_schema_end(WEB_SALES, "WS_PRICING_EXT_TAX", "DECIMAL(7,2)");
-		print_json_schema_col(WEB_SALES, "WS_PRICING_COUPON_AMT", "DECIMAL(7,2)");
-		print_json_schema_col(WEB_SALES, "WS_PRICING_NET_PAID", "DECIMAL(7,2)");
-		print_json_schema_col(WEB_SALES, "WS_PRICING_NET_PAID_INC_TAX", "DECIMAL(7,2)");
-		print_json_schema_col(WEB_SALES, "WS_PRICING_NET_PAID_INC_SHIP", "DECIMAL(7,2)");
-		print_json_schema_col(WEB_SALES, "WS_PRICING_NET_PAID_INC_SHIP_TAX", "DECIMAL(7,2)");
-		print_json_schema_end(WEB_SALES, "WS_PRICING_NET_PROFIT", "DECIMAL(7,2)");
+		print_json_schema_col(WEB_SALES, "WS_PRICING_WHOLESALE_COST", "DECIMAL (7,2)");
+		print_json_schema_col(WEB_SALES, "WS_PRICING_LIST_PRICE", "DECIMAL (7,2)");
+		print_json_schema_col(WEB_SALES, "WS_PRICING_SALES_PRICE", "DECIMAL (7,2)");
+		print_json_schema_col(WEB_SALES, "WS_PRICING_EXT_DISCOUNT_AMT", "DECIMAL (7,2)");
+		print_json_schema_col(WEB_SALES, "WS_PRICING_EXT_SALES_PRICE", "DECIMAL (7,2)");
+		print_json_schema_col(WEB_SALES, "WS_PRICING_EXT_WHOLESALE_COST", "DECIMAL (7,2)");
+		print_json_schema_col(WEB_SALES, "WS_PRICING_EXT_LIST_PRICE", "DECIMAL (7,2)");
+		print_json_schema_end(WEB_SALES, "WS_PRICING_EXT_TAX", "DECIMAL (7,2)");
+		print_json_schema_col(WEB_SALES, "WS_PRICING_COUPON_AMT", "DECIMAL (7,2)");
+		print_json_schema_col(WEB_SALES, "WS_PRICING_NET_PAID", "DECIMAL (7,2)");
+		print_json_schema_col(WEB_SALES, "WS_PRICING_NET_PAID_INC_TAX", "DECIMAL (7,2)");
+		print_json_schema_col(WEB_SALES, "WS_PRICING_NET_PAID_INC_SHIP", "DECIMAL (7,2)");
+		print_json_schema_col(WEB_SALES, "WS_PRICING_NET_PAID_INC_SHIP_TAX", "DECIMAL (7,2)");
+		print_json_schema_end(WEB_SALES, "WS_PRICING_NET_PROFIT", "DECIMAL (7,2)");
 	}
 	SCHEMA_W = 1;
 

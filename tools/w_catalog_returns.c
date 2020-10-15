@@ -241,15 +241,15 @@ int pr_w_catalog_returns(void *row)
 		print_json_schema_col(CATALOG_RETURNS, "CR_REASON_SK", "STRING");
 		print_json_schema_col(CATALOG_RETURNS, "CR_ORDER_NUMBER", "STRING");
 		print_json_schema_col(CATALOG_RETURNS, "CR_PRICING_QUANTITY", "INT");
-		print_json_schema_col(CATALOG_RETURNS, "CR_PRICING_NET_PAID", "DECIMAL(7,2)");
-		print_json_schema_col(CATALOG_RETURNS, "CR_PRICING_EXT_TAX", "DECIMAL(7,2)");
-		print_json_schema_col(CATALOG_RETURNS, "CR_PRICING_NET_PAID_INC_TAX", "DECIMAL(7,2)");
-		print_json_schema_col(CATALOG_RETURNS, "CR_PRICING_FEE", "DECIMAL(7,2)");
-		print_json_schema_col(CATALOG_RETURNS, "CR_PRICING_EXT_SHIP_COST", "DECIMAL(7,2)");
-		print_json_schema_col(CATALOG_RETURNS, "CR_PRICING_REFUNDED_CASH", "DECIMAL(7,2)");
-		print_json_schema_col(CATALOG_RETURNS, "CR_PRICING_REVERSED_CHARGE", "DECIMAL(7,2)");
-		print_json_schema_col(CATALOG_RETURNS, "CR_PRICING_STORE_CREDIT", "DECIMAL(7,2)");
-		print_json_schema_end(CATALOG_RETURNS, "CR_PRICING_NET_LOSS", "DECIMAL(7,2)");
+		print_json_schema_col(CATALOG_RETURNS, "CR_PRICING_NET_PAID", "DECIMAL (7,2)");
+		print_json_schema_col(CATALOG_RETURNS, "CR_PRICING_EXT_TAX", "DECIMAL (7,2)");
+		print_json_schema_col(CATALOG_RETURNS, "CR_PRICING_NET_PAID_INC_TAX", "DECIMAL (7,2)");
+		print_json_schema_col(CATALOG_RETURNS, "CR_PRICING_FEE", "DECIMAL (7,2)");
+		print_json_schema_col(CATALOG_RETURNS, "CR_PRICING_EXT_SHIP_COST", "DECIMAL (7,2)");
+		print_json_schema_col(CATALOG_RETURNS, "CR_PRICING_REFUNDED_CASH", "DECIMAL (7,2)");
+		print_json_schema_col(CATALOG_RETURNS, "CR_PRICING_REVERSED_CHARGE", "DECIMAL (7,2)");
+		print_json_schema_col(CATALOG_RETURNS, "CR_PRICING_STORE_CREDIT", "DECIMAL (7,2)");
+		print_json_schema_end(CATALOG_RETURNS, "CR_PRICING_NET_LOSS", "DECIMAL (7,2)");
 	}
 	SCHEMA_W = 1;
 
