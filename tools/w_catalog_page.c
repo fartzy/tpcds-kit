@@ -175,12 +175,11 @@ int pr_w_catalog_page(void *row)
 		print_json_schema_start(CATALOG_PAGE);
 		print_json_schema_col(CATALOG_PAGE, "CP_CATALOG_PAGE_SK", "STRING");
 		print_json_schema_col(CATALOG_PAGE, "CP_CATALOG_PAGE_ID", "STRING");
-		print_json_schema_col(CATALOG_PAGE, "CP_START_DATE_ID", "STRING");
-		print_json_schema_col(CATALOG_PAGE, "CP_END_DATE_ID", "STRING");
+		print_json_schema_col(CATALOG_PAGE, "CP_START_DATE_SK", "STRING");
+		print_json_schema_col(CATALOG_PAGE, "CP_END_DATE_SK", "STRING");
 		print_json_schema_col(CATALOG_PAGE, "CP_DEPARTMENT", "STRING");
-		print_json_schema_col(CATALOG_PAGE, "CP_CATALOG_NUMBER", "STRING");
+		print_json_schema_col(CATALOG_PAGE, "CP_CATALOG_NUMBER", "INT");
 		print_json_schema_col(CATALOG_PAGE, "CP_CATALOG_PAGE_NUMBER", "INT");
-		print_json_schema_col(CATALOG_PAGE, "CR_RETURNING_CUSTOMER_SK", "INT");
 		print_json_schema_col(CATALOG_PAGE, "CP_DESCRIPTION", "STRING");
 		print_json_schema_end(CATALOG_PAGE, "CP_TYPE", "STRING");
 	}

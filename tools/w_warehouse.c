@@ -134,21 +134,23 @@ int pr_w_warehouse(void *row)
 	// print schema out to file
 	if (SCHEMA_W < 1)
 	{
+		//These columns could be very different from above! They have been matched to the spec doc instead, so that the queries will work.
+		//Look at the table in TPC-DS_v2.10.1.pdf
 		print_json_schema_start(WAREHOUSE);
 		print_json_schema_col(WAREHOUSE, "W_WAREHOUSE_SK", "STRING");
 		print_json_schema_col(WAREHOUSE, "W_WAREHOUSE_ID", "STRING");
 		print_json_schema_col(WAREHOUSE, "W_WAREHOUSE_NAME", "STRING");
 		print_json_schema_col(WAREHOUSE, "W_WAREHOUSE_SQ_FT", "INT");
-		print_json_schema_col(WAREHOUSE, "W_ADDRESS_STREET_NUM", "INT");
-		print_json_schema_col(WAREHOUSE, "W_ADDRESS_STREET_NAME1", "STRING");
-		print_json_schema_col(WAREHOUSE, "W_ADDRESS_STREET_TYPE", "STRING");
-		print_json_schema_col(WAREHOUSE, "W_ADDRESS_SUITE_NUM", "INT");
-		print_json_schema_col(WAREHOUSE, "W_ADDRESS_CITY", "STRING");
-		print_json_schema_col(WAREHOUSE, "W_ADDRESS_COUNTY", "STRING");
-		print_json_schema_col(WAREHOUSE, "W_ADDRESS_STATE", "STRING");
-		print_json_schema_col(WAREHOUSE, "W_ADDRESS_ZIP", "STRING");
-		print_json_schema_col(WAREHOUSE, "W_ADDRESS_COUNTRY", "STRING");
-		print_json_schema_end(WAREHOUSE, "W_ADDRESS_GMT_OFFSET", "INT");
+		print_json_schema_col(WAREHOUSE, "W_STREET_NUMBER", "INT");
+		print_json_schema_col(WAREHOUSE, "W_STREET_NAME", "STRING");
+		print_json_schema_col(WAREHOUSE, "W_STREET_TYPE", "STRING");
+		print_json_schema_col(WAREHOUSE, "W_SUITE_NUMBER", "STRING");
+		print_json_schema_col(WAREHOUSE, "W_CITY", "STRING");
+		print_json_schema_col(WAREHOUSE, "W_COUNTY", "STRING");
+		print_json_schema_col(WAREHOUSE, "W_STATE", "STRING");
+		print_json_schema_col(WAREHOUSE, "W_ZIP", "STRING");
+		print_json_schema_col(WAREHOUSE, "W_COUNTRY", "STRING");
+		print_json_schema_end(WAREHOUSE, "W_GMT_OFFSET", "DECIMAL (5,2)");
 	}
 	SCHEMA_W = 1;
 

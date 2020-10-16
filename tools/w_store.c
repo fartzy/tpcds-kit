@@ -276,34 +276,38 @@ int pr_w_store(void *row)
 	// print schema out to file
 	if (SCHEMA_W < 1)
 	{
+		//These columns are very different from above! They have been matched to the spec doc instead, so that the queries will work.
+		//Look at the table in TPC-DS_v2.10.1.pdf
 		print_json_schema_start(STORE);
-		print_json_schema_col(STORE, "W_STORE_SK", "STRING");
-		print_json_schema_col(STORE, "W_STORE_ID", "STRING");
-		print_json_schema_col(STORE, "W_STORE_REC_START_DATE_ID", "DATE");
-		print_json_schema_col(STORE, "W_STORE_REC_END_DATE_ID", "DATE");
-		print_json_schema_col(STORE, "W_STORE_CLOSED_DATE_ID", "STRING");
-		print_json_schema_col(STORE, "W_STORE_NAME", "STRING");
-		print_json_schema_col(STORE, "W_STORE_EMPLOYEES", "INT");
-		print_json_schema_col(STORE, "W_STORE_FLOOR_SPACE", "INT");
-		print_json_schema_col(STORE, "W_STORE_HOURS", "STRING");
-		print_json_schema_col(STORE, "W_STORE_MANAGER", "STRING");
-		print_json_schema_col(STORE, "W_STORE_MARKET_ID", "INT");
-		print_json_schema_col(STORE, "W_STORE_GEOGRAPHY_CLASS", "STRING");
-		print_json_schema_col(STORE, "W_STORE_MARKET_DESC", "STRING");
-		print_json_schema_col(STORE, "W_STORE_MARKET_MANAGER", "STRING");
-		print_json_schema_col(STORE, "W_STORE_DIVISION_ID", "STRING");
-		print_json_schema_col(STORE, "W_STORE_COMPANY_NAME", "STRING");
-		print_json_schema_col(STORE, "W_STORE_ADDRESS_STREET_NUM", "STRING");
-		print_json_schema_col(STORE, "W_STORE_ADDRESS_STREET_NAME1", "STRING");
-		print_json_schema_col(STORE, "W_STORE_ADDRESS_STREET_TYPE", "STRING");
-		print_json_schema_col(STORE, "W_STORE_ADDRESS_SUITE_NUM", "STRING");
-		print_json_schema_col(STORE, "W_STORE_ADDRESS_CITY", "STRING");
-		print_json_schema_col(STORE, "W_STORE_ADDRESS_COUNTY", "STRING");
-		print_json_schema_col(STORE, "W_STORE_ADDRESS_STATE", "STRING");
-		print_json_schema_col(STORE, "W_STORE_ADDRESS_ZIP", "STRING");
-		print_json_schema_col(STORE, "W_STORE_ADDRESS_COUNTRY", "STRING");
-		print_json_schema_col(STORE, "W_STORE_ADDRESS_GMT_OFFSET", "INT");
-		print_json_schema_end(STORE, "W_STORE_TAX_PERCENTAGE", "DECIMAL (7,2)");
+		print_json_schema_col(STORE, "S_STORE_SK", "STRING");
+		print_json_schema_col(STORE, "S_STORE_ID", "STRING");
+		print_json_schema_col(STORE, "S_REC_START_DATE", "DATE");
+		print_json_schema_col(STORE, "S_REC_END_DATE", "DATE");
+		print_json_schema_col(STORE, "S_CLOSED_DATE_SK", "STRING");
+		print_json_schema_col(STORE, "S_STORE_NAME", "STRING");
+		print_json_schema_col(STORE, "S_NUMBER_EMPLOYEES", "INT");
+		print_json_schema_col(STORE, "S_FLOOR_SPACE", "INT");
+		print_json_schema_col(STORE, "S_HOURS", "STRING");
+		print_json_schema_col(STORE, "S_MANAGER", "STRING");
+		print_json_schema_col(STORE, "S_MARKET_ID", "INT");
+		print_json_schema_col(STORE, "S_GEOGRAPHY_CLASS", "STRING");
+		print_json_schema_col(STORE, "S_MARKET_DESC", "STRING");
+		print_json_schema_col(STORE, "S_MARKET_MANAGER", "STRING");
+		print_json_schema_col(STORE, "S_DIVISION_ID", "INT");
+		print_json_schema_col(STORE, "S_DIVISION_NAME", "STRING");
+		print_json_schema_col(STORE, "S_COMPANY_ID", "INT");
+		print_json_schema_col(STORE, "S_COMPANY_NAME", "STRING");
+		print_json_schema_col(STORE, "S_STREET_NUMBER", "STRING");
+		print_json_schema_col(STORE, "S_STREET_NAME", "STRING");
+		print_json_schema_col(STORE, "S_STREET_TYPE", "STRING");
+		print_json_schema_col(STORE, "S_SUITE_NUMBER", "STRING");
+		print_json_schema_col(STORE, "S_CITY", "STRING");
+		print_json_schema_col(STORE, "S_COUNTY", "STRING");
+		print_json_schema_col(STORE, "S_STATE", "STRING");
+		print_json_schema_col(STORE, "S_ZIP", "STRING");
+		print_json_schema_col(STORE, "S_COUNTRY", "STRING");
+		print_json_schema_col(STORE, "S_GMT_OFFSET", "DECIMAL (5,2)");
+		print_json_schema_end(STORE, "S_TAX_PERCENTAGE", "DECIMAL (5,2)");
 	}
 	SCHEMA_W = 1;
 

@@ -174,6 +174,8 @@ int pr_w_store_returns(void *row)
 	// print schema out to file
 	if (SCHEMA_W < 1)
 	{
+		//These columns are all very diffrent from above! They have been matched to the spec doc instead, so that the queries will work.
+		//Look at the table in TPC-DS_v2.10.1.pdf
 		print_json_schema_start(STORE_RETURNS);
 		print_json_schema_col(STORE_RETURNS, "SR_RETURNED_DATE_SK", "STRING");
 		print_json_schema_col(STORE_RETURNS, "SR_RETURNED_TIME_SK", "STRING");
@@ -185,16 +187,16 @@ int pr_w_store_returns(void *row)
 		print_json_schema_col(STORE_RETURNS, "SR_STORE_SK", "STRING");
 		print_json_schema_col(STORE_RETURNS, "SR_REASON_SK", "STRING");
 		print_json_schema_col(STORE_RETURNS, "SR_TICKET_NUMBER", "STRING");
-		print_json_schema_col(STORE_RETURNS, "SR_PRICING_QUANTITY", "INT");
-		print_json_schema_col(STORE_RETURNS, "SR_PRICING_NET_PAID", "DECIMAL (7,2)");
-		print_json_schema_col(STORE_RETURNS, "SR_PRICING_EXT_TAX", "DECIMAL (7,2)");
-		print_json_schema_col(STORE_RETURNS, "SR_PRICING_NET_PAID_INC_TAX", "DECIMAL (7,2)");
-		print_json_schema_col(STORE_RETURNS, "SR_PRICING_FEE", "DECIMAL (7,2)");
-		print_json_schema_col(STORE_RETURNS, "SR_PRICING_EXT_SHIP_COST", "DECIMAL (7,2)");
-		print_json_schema_col(STORE_RETURNS, "SR_PRICING_REFUNDED_CASH", "DECIMAL (7,2)");
-		print_json_schema_col(STORE_RETURNS, "SR_PRICING_REVERSED_CHARGE", "DECIMAL (7,2)");
-		print_json_schema_col(STORE_RETURNS, "SR_PRICING_STORE_CREDIT", "DECIMAL (7,2)");
-		print_json_schema_end(STORE_RETURNS, "SR_PRICING_NET_LOSS", "DECIMAL (7,2)");
+		print_json_schema_col(STORE_RETURNS, "SR_RETURN_QUANTITY", "INT");
+		print_json_schema_col(STORE_RETURNS, "SR_RETURN_AMT", "DECIMAL (7,2)");
+		print_json_schema_col(STORE_RETURNS, "SR_RETURN_TAX", "DECIMAL (7,2)");
+		print_json_schema_col(STORE_RETURNS, "SR_RETURN_AMT_INC_TAX", "DECIMAL (7,2)");
+		print_json_schema_col(STORE_RETURNS, "SR_FEE", "DECIMAL (7,2)");
+		print_json_schema_col(STORE_RETURNS, "SR_RETURN_SHIP_COST", "DECIMAL (7,2)");
+		print_json_schema_col(STORE_RETURNS, "SR_REFUNDED_CASH", "DECIMAL (7,2)");
+		print_json_schema_col(STORE_RETURNS, "SR_REVERSED_CHARGE", "DECIMAL (7,2)");
+		print_json_schema_col(STORE_RETURNS, "SR_STORE_CREDIT", "DECIMAL (7,2)");
+		print_json_schema_end(STORE_RETURNS, "SR_NET_LOSS", "DECIMAL (7,2)");
 	}
 	SCHEMA_W = 1;
 

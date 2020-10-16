@@ -204,12 +204,13 @@ int pr_w_date(void *row)
 	// print schema out to file
 	if (SCHEMA_W < 1)
 	{
-
+		//These columns could be very different from above! They have been matched to the spec doc instead, so that the queries will work.
+		//Look at the table in TPC-DS_v2.10.1.pdf
 		print_json_schema_start(DATE);
 		print_json_schema_col(DATE, "D_DATE_SK", "STRING");
 		print_json_schema_col(DATE, "D_DATE_ID", "STRING");
 
-		print_json_schema_col(DATE, "D_DATE_SK", "DATE");
+		print_json_schema_col(DATE, "D_DATE", "DATE");
 		print_json_schema_col(DATE, "D_MONTH_SEQ", "INT");
 		print_json_schema_col(DATE, "D_WEEK_SEQ", "INT");
 		print_json_schema_col(DATE, "D_QUARTER_SEQ", "INT");
@@ -231,7 +232,6 @@ int pr_w_date(void *row)
 		print_json_schema_col(DATE, "D_LAST_DOM", "INT");
 		print_json_schema_col(DATE, "D_SAME_DAY_LY", "INT");
 		print_json_schema_col(DATE, "D_SAME_DAY_LQ", "INT");
-		print_json_schema_col(DATE, "D_SIZE", "STRING");
 		print_json_schema_col(DATE, "D_CURRENT_DAY", "STRING");
 		print_json_schema_col(DATE, "D_CURRENT_WEEK", "STRING");
 		print_json_schema_col(DATE, "D_CURRENT_MONTH", "STRING");

@@ -202,30 +202,32 @@ int pr_w_store_sales(void *row)
 	// print schema out to file
 	if (SCHEMA_W < 1)
 	{
+		//These columns are all very diffrent from above! They have been matched to the spec doc instead, so that the queries will work.
+		//Look at the table in TPC-DS_v2.10.1.pdf
 		print_json_schema_start(STORE_SALES);
 		print_json_schema_col(STORE_SALES, "SS_SOLD_DATE_SK", "STRING");
 		print_json_schema_col(STORE_SALES, "SS_SOLD_TIME_SK", "STRING");
-		print_json_schema_col(STORE_SALES, "SS_SOLD_ITEM_SK", "STRING");
-		print_json_schema_col(STORE_SALES, "SS_SOLD_CUSTOMER_SK", "STRING");
-		print_json_schema_col(STORE_SALES, "SS_SOLD_CDEMO_SK", "STRING");
-		print_json_schema_col(STORE_SALES, "SS_SOLD_HDEMO_SK", "STRING");
-		print_json_schema_col(STORE_SALES, "SS_SOLD_ADDR_SK", "STRING");
-		print_json_schema_col(STORE_SALES, "SS_SOLD_STORE_SK", "STRING");
-		print_json_schema_col(STORE_SALES, "SS_SOLD_PROMO_SK", "STRING");
-		print_json_schema_col(STORE_SALES, "SR_TICKET_NUMBER", "STRING");
-		print_json_schema_col(STORE_SALES, "SR_PRICING_QUANTITY", "INT");
-		print_json_schema_col(STORE_SALES, "SS_PRICING_WHOLESALE_COST", "DECIMAL (7,2)");
-		print_json_schema_col(STORE_SALES, "SS_PRICING_LIST_PRICE", "DECIMAL (7,2)");
-		print_json_schema_col(STORE_SALES, "SS_PRICING_SALES_PRICE", "DECIMAL (7,2)");
-		print_json_schema_col(STORE_SALES, "SS_PRICING_COUPON_AMT", "DECIMAL (7,2)");
-		print_json_schema_col(STORE_SALES, "SS_PRICING_EXT_SALES_PRICE", "DECIMAL (7,2)");
-		print_json_schema_col(STORE_SALES, "SS_PRICING_EXT_WHOLESALE_COST", "DECIMAL (7,2)");
-		print_json_schema_col(STORE_SALES, "SS_PRICING_EXT_LIST_PRICE", "DECIMAL (7,2)");
-		print_json_schema_end(STORE_SALES, "SS_PRICING_EXT_TAX", "DECIMAL (7,2)");
-		print_json_schema_col(STORE_SALES, "SS_PRICING_COUPON_AMT", "DECIMAL (7,2)");
-		print_json_schema_col(STORE_SALES, "SS_PRICING_NET_PAID", "DECIMAL (7,2)");
-		print_json_schema_col(STORE_SALES, "SS_PRICING_NET_PAID_INC_TAX", "DECIMAL (7,2)");
-		print_json_schema_end(STORE_SALES, "SS_PRICING_NET_PROFIT", "DECIMAL (7,2)");
+		print_json_schema_col(STORE_SALES, "SS_ITEM_SK", "STRING");
+		print_json_schema_col(STORE_SALES, "SS_CUSTOMER_SK", "STRING");
+		print_json_schema_col(STORE_SALES, "SS_CDEMO_SK", "STRING");
+		print_json_schema_col(STORE_SALES, "SS_HDEMO_SK", "STRING");
+		print_json_schema_col(STORE_SALES, "SS_ADDR_SK", "STRING");
+		print_json_schema_col(STORE_SALES, "SS_STORE_SK", "STRING");
+		print_json_schema_col(STORE_SALES, "SS_PROMO_SK", "STRING");
+		print_json_schema_col(STORE_SALES, "SS_TICKET_NUMBER", "STRING");
+		print_json_schema_col(STORE_SALES, "SS_QUANTITY", "INT");
+		print_json_schema_col(STORE_SALES, "SS_WHOLESALE_COST", "DECIMAL (7,2)");
+		print_json_schema_col(STORE_SALES, "SS_LIST_PRICE", "DECIMAL (7,2)");
+		print_json_schema_col(STORE_SALES, "SS_SALES_PRICE", "DECIMAL (7,2)");
+		print_json_schema_col(STORE_SALES, "SS_EXT_DISCOUNT_AMT", "DECIMAL (7,2)");
+		print_json_schema_col(STORE_SALES, "SS_EXT_SALES_PRICE", "DECIMAL (7,2)");
+		print_json_schema_col(STORE_SALES, "SS_EXT_WHOLESALE_COST", "DECIMAL (7,2)");
+		print_json_schema_col(STORE_SALES, "SS_EXT_LIST_PRICE", "DECIMAL (7,2)");
+		print_json_schema_col(STORE_SALES, "SS_EXT_TAX", "DECIMAL (7,2)");
+		print_json_schema_col(STORE_SALES, "SS_COUPON_AMT", "DECIMAL (7,2)");
+		print_json_schema_col(STORE_SALES, "SS_NET_PAID", "DECIMAL (7,2)");
+		print_json_schema_col(STORE_SALES, "SS_NET_PAID_INC_TAX", "DECIMAL (7,2)");
+		print_json_schema_end(STORE_SALES, "SS_NET_PROFIT", "DECIMAL (7,2)");
 	}
 	SCHEMA_W = 1;
 

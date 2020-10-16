@@ -185,26 +185,27 @@ int pr_w_customer(void *row)
 	// print schema out to file
 	if (SCHEMA_W < 1)
 	{
-
+		//These columns could be very different from above! They have been matched to the spec doc instead, so that the queries will work.
+		//Look at the table in TPC-DS_v2.10.1.pdf
 		print_json_schema_start(CUSTOMER);
 		print_json_schema_col(CUSTOMER, "C_CUSTOMER_SK", "STRING");
 		print_json_schema_col(CUSTOMER, "C_CUSTOMER_ID", "STRING");
-		print_json_schema_col(CUSTOMER, "C_CURRENT_CDEMO_SK", "DATE");
-		print_json_schema_col(CUSTOMER, "C_CURRENT_HDEMO_SK", "INT");
-		print_json_schema_col(CUSTOMER, "C_CURRENT_ADDR_SK", "INT");
-		print_json_schema_col(CUSTOMER, "C_FIRST_SHIPTO_DATE_ID", "INT");
-		print_json_schema_col(CUSTOMER, "C_FIRST_SALES_DATE_ID", "INT");
-		print_json_schema_col(CUSTOMER, "C_SALUTATION", "INT");
-		print_json_schema_col(CUSTOMER, "C_FIRST_NAME", "INT");
-		print_json_schema_col(CUSTOMER, "C_LAST_NAME", "INT");
-		print_json_schema_col(CUSTOMER, "C_PREFERRED_CUST_FLAG", "INT");
+		print_json_schema_col(CUSTOMER, "C_CURRENT_CDEMO_SK", "STRING");
+		print_json_schema_col(CUSTOMER, "C_CURRENT_HDEMO_SK", "STRING");
+		print_json_schema_col(CUSTOMER, "C_CURRENT_ADDR_SK", "STRING");
+		print_json_schema_col(CUSTOMER, "C_FIRST_SHIPTO_DATE_ID", "STRING");
+		print_json_schema_col(CUSTOMER, "C_FIRST_SALES_DATE_ID", "STRING");
+		print_json_schema_col(CUSTOMER, "C_SALUTATION", "STRING");
+		print_json_schema_col(CUSTOMER, "C_FIRST_NAME", "STRING");
+		print_json_schema_col(CUSTOMER, "C_LAST_NAME", "STRING");
+		print_json_schema_col(CUSTOMER, "C_PREFERRED_CUST_FLAG", "STRING");
 		print_json_schema_col(CUSTOMER, "C_BIRTH_DAY", "INT");
 		print_json_schema_col(CUSTOMER, "C_BIRTH_MONTH", "INT");
 		print_json_schema_col(CUSTOMER, "C_BIRTH_YEAR", "INT");
 		print_json_schema_col(CUSTOMER, "C_BIRTH_COUNTRY", "STRING");
 		print_json_schema_col(CUSTOMER, "C_LOGIN", "STRING");
 		print_json_schema_col(CUSTOMER, "C_EMAIL_ADDRESS", "STRING");
-		print_json_schema_end(CUSTOMER, "C_LAST_REVIEW_DATE", "STRING");
+		print_json_schema_end(CUSTOMER, "C_LAST_REVIEW_DATE_SK", "STRING");
 	}
 	SCHEMA_W = 1;
 
