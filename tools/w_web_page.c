@@ -218,11 +218,13 @@ int pr_w_web_page(void *row)
 	// print schema out to file
 	if (SCHEMA_W < 1)
 	{
+		//These columns could be very different from above! They have been matched to the spec doc instead, so that the queries will work.
+		//Look at the table in TPC-DS_v2.10.1.pdf
 		print_json_schema_start(WEB_PAGE);
-		print_json_schema_col(WEB_PAGE, "WP_PAGE_SK", "STRING");
-		print_json_schema_col(WEB_PAGE, "WP_PAGE_ID", "STRING");
-		print_json_schema_col(WEB_PAGE, "W_STORE_REC_START_DATE_ID", "DATE");
-		print_json_schema_col(WEB_PAGE, "W_STORE_REC_END_DATE_ID", "DATE");
+		print_json_schema_col(WEB_PAGE, "WP_WEB_PAGE_SK", "STRING");
+		print_json_schema_col(WEB_PAGE, "WP_WEB_PAGE_ID", "STRING");
+		print_json_schema_col(WEB_PAGE, "WP_REC_START_DATE", "DATE");
+		print_json_schema_col(WEB_PAGE, "WP_REC_END_DATE", "DATE");
 		print_json_schema_col(WEB_PAGE, "WP_CREATION_DATE_SK", "STRING");
 		print_json_schema_col(WEB_PAGE, "WP_ACCESS_DATE_SK", "STRING");
 		print_json_schema_col(WEB_PAGE, "WP_AUTOGEN_FLAG", "INT");

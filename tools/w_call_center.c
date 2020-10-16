@@ -282,29 +282,41 @@ int pr_w_call_center(void *row)
 	// print schema out to file
 	if (SCHEMA_W < 1)
 	{
+		//These columns are all very diffrent from above! They have been matched to the spec doc instead, so that the queries will work.
+		//Look at the table in TPC-DS_v2.10.1.pdf
 		print_json_schema_start(CALL_CENTER);
 		print_json_schema_col(CALL_CENTER, "CC_CALL_CENTER_SK", "STRING");
 		print_json_schema_col(CALL_CENTER, "CC_CALL_CENTER_ID", "STRING");
-		print_json_schema_col(CALL_CENTER, "CC_REC_START_DATE_ID", "DATE");
-		print_json_schema_col(CALL_CENTER, "CC_REC_END_DATE_ID", "DATE");
-		print_json_schema_col(CALL_CENTER, "CC_CLOSED_DATE_ID", "STRING");
-		print_json_schema_col(CALL_CENTER, "CC_OPEN_DATE_ID", "STRING");
+		print_json_schema_col(CALL_CENTER, "CC_REC_START_DATE", "DATE");
+		print_json_schema_col(CALL_CENTER, "CC_REC_END_DATE", "DATE");
+		print_json_schema_col(CALL_CENTER, "CC_CLOSED_DATE_SK", "STRING");
+		print_json_schema_col(CALL_CENTER, "CC_OPEN_DATE_SK", "STRING");
 		print_json_schema_col(CALL_CENTER, "CC_NAME", "STRING");
 		print_json_schema_col(CALL_CENTER, "CC_CLASS", "STRING");
 		print_json_schema_col(CALL_CENTER, "CC_EMPLOYEES", "INT");
 		print_json_schema_col(CALL_CENTER, "CC_SQ_FT", "INT");
 		print_json_schema_col(CALL_CENTER, "CC_HOURS", "INT");
 		print_json_schema_col(CALL_CENTER, "CC_MANAGER", "STRING");
-		print_json_schema_col(CALL_CENTER, "CC_MARKET_ID", "INT");
-		print_json_schema_col(CALL_CENTER, "CC_MARKET_CLASS", "STRING");
-		print_json_schema_col(CALL_CENTER, "CC_MARKET_DESC", "STRING");
+		print_json_schema_col(CALL_CENTER, "CC_MKT_ID", "INT");
+		print_json_schema_col(CALL_CENTER, "CC_MKT_CLASS", "STRING");
+		print_json_schema_col(CALL_CENTER, "CC_MKT_DESC", "STRING");
 		print_json_schema_col(CALL_CENTER, "CC_MARKET_MANAGER", "STRING");
 		print_json_schema_col(CALL_CENTER, "CC_DIVISION", "INT");
 		print_json_schema_col(CALL_CENTER, "CC_DIVISION_NAME", "STRING");
 		print_json_schema_col(CALL_CENTER, "CC_COMPANY", "INT");
 		print_json_schema_col(CALL_CENTER, "CC_COMPANY_NAME", "STRING");
-		print_json_schema_col(CALL_CENTER, "CC_ADDRESS", "STRING");
-		print_json_schema_end(CALL_CENTER, "CC_TAX_PERCENTAGE", "DECIMAL (7,2)");
+		print_json_schema_col(CALL_CENTER, "CC_STREET_NUMBER", "STRING");
+		print_json_schema_col(CALL_CENTER, "CC_STREET_NAME", "STRING");
+		print_json_schema_col(CALL_CENTER, "CC_STREET_TYPE", "STRING");
+		print_json_schema_col(CALL_CENTER, "CC_SUITE_NUMBER", "STRING");
+		print_json_schema_col(CALL_CENTER, "CC_STREET_NUMBER", "STRING");
+		print_json_schema_col(CALL_CENTER, "CC_CITY", "STRING");
+		print_json_schema_col(CALL_CENTER, "CC_COUNTY", "STRING");
+		print_json_schema_col(CALL_CENTER, "CC_STATE", "STRING");
+		print_json_schema_col(CALL_CENTER, "CC_ZIP", "STRING");
+		print_json_schema_col(CALL_CENTER, "CC_COUNTRY", "STRING");
+		print_json_schema_col(CALL_CENTER, "CC_GMT_OFFSET", "DECIMAL (5,2)");
+		print_json_schema_end(CALL_CENTER, "CC_TAX_PERCENTAGE", "DECIMAL (5,2)");
 	}
 	SCHEMA_W = 1;
 

@@ -125,7 +125,8 @@ int pr_w_customer_demographics(void *row)
 	// print schema out to file
 	if (SCHEMA_W < 1)
 	{
-
+		//These columns might be very different from above! They have been matched to the spec doc instead, so that the queries will work.
+		//Look at the table in TPC-DS_v2.10.1.pdf
 		print_json_schema_start(CUSTOMER_DEMOGRAPHICS);
 		print_json_schema_col(CUSTOMER_DEMOGRAPHICS, "CD_DEMO_SK", "STRING");
 		print_json_schema_col(CUSTOMER_DEMOGRAPHICS, "CD_GENDER", "STRING");

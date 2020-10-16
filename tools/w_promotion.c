@@ -182,21 +182,22 @@ int pr_w_promotion(void *row)
 	// print schema out to file
 	if (SCHEMA_W < 1)
 	{
+		//These columns are all very diffrent from above! They have been matched to the spec doc instead, so that the queries will work.
+		//Look at the table in TPC-DS_v2.10.1.pdf
 		print_json_schema_start(PROMOTION);
 		print_json_schema_col(PROMOTION, "P_PROMO_SK", "STRING");
 		print_json_schema_col(PROMOTION, "P_PROMO_ID", "STRING");
-		print_json_schema_col(PROMOTION, "P_START_DATE_ID", "DATE");
-		print_json_schema_col(PROMOTION, "P_END_DATE_ID", "DATE");
+		print_json_schema_col(PROMOTION, "P_START_DATE_SK", "STRING");
+		print_json_schema_col(PROMOTION, "P_END_DATE_SK", "STRING");
 		print_json_schema_col(PROMOTION, "P_ITEM_SK", "STRING");
-		print_json_schema_col(PROMOTION, "P_COST", "DECIMAL (7,2)");
+		print_json_schema_col(PROMOTION, "P_COST", "DECIMAL (15,2)");
 		print_json_schema_col(PROMOTION, "P_RESPONSE_TARGET", "INT");
 		print_json_schema_col(PROMOTION, "P_PROMO_NAME", "STRING");
-		print_json_schema_col(PROMOTION, "I_BRAND", "STRING");
 		print_json_schema_col(PROMOTION, "P_CHANNEL_DMAIL", "STRING");
 		print_json_schema_col(PROMOTION, "P_CHANNEL_EMAIL", "STRING");
 		print_json_schema_col(PROMOTION, "P_CHANNEL_CATALOG", "STRING");
 		print_json_schema_col(PROMOTION, "P_CHANNEL_TV", "STRING");
-		print_json_schema_col(PROMOTION, "P_CHANNEL_RADIO", "INT");
+		print_json_schema_col(PROMOTION, "P_CHANNEL_RADIO", "STRING");
 		print_json_schema_col(PROMOTION, "P_CHANNEL_PRESS", "STRING");
 		print_json_schema_col(PROMOTION, "P_CHANNEL_EVENT", "STRING");
 		print_json_schema_col(PROMOTION, "P_CHANNEL_DEMO", "STRING");

@@ -110,7 +110,7 @@ int pr_w_income_band(void *row)
 	if (SCHEMA_W < 1)
 	{
 		print_json_schema_start(INCOME_BAND);
-		print_json_schema_col(INCOME_BAND, "IB_INCOME_BAND_ID", "STRING");
+		print_json_schema_col(INCOME_BAND, "IB_INCOME_BAND_SK", "STRING");
 		print_json_schema_col(INCOME_BAND, "IB_LOWER_BOUND", "STRING");
 		print_json_schema_end(INCOME_BAND, "IB_UPPER_BOUND", "STRING");
 	}

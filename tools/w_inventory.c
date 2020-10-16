@@ -147,9 +147,11 @@ int pr_w_inventory(void *row)
 	// print schema out to file
 	if (SCHEMA_W < 1)
 	{
+		//These columns could be very different from above! They have been matched to the spec doc instead, so that the queries will work.
+		//Look at the table in TPC-DS_v2.10.1.pdf
 		print_json_schema_start(INVENTORY);
-		print_json_schema_col(INVENTORY, "INV_SITE_SK", "STRING");
-		print_json_schema_col(INVENTORY, "INV_SITE_ID", "STRING");
+		print_json_schema_col(INVENTORY, "INV_DATE_SK", "STRING");
+		print_json_schema_col(INVENTORY, "INV_ITEM_SK", "STRING");
 		print_json_schema_col(INVENTORY, "INV_WAREHOUSE_SK", "STRING");
 		print_json_schema_end(INVENTORY, "INV_QUANTITY_ON_HAND", "INT");
 	}

@@ -125,6 +125,8 @@ int pr_w_time(void *row)
 	// print schema out to file
 	if (SCHEMA_W < 1)
 	{
+		//These columns could be very different from above! They have been matched to the spec doc instead, so that the queries will work.
+		//Look at the table in TPC-DS_v2.10.1.pdf
 		print_json_schema_start(TIME);
 		print_json_schema_col(TIME, "T_TIME_SK", "STRING");
 		print_json_schema_col(TIME, "T_TIME_ID", "STRING");
@@ -133,7 +135,7 @@ int pr_w_time(void *row)
 		print_json_schema_col(TIME, "T_MINUTE", "INT");
 		print_json_schema_col(TIME, "T_SECOND", "INT");
 		print_json_schema_col(TIME, "T_AM_PM", "STRING");
-		print_json_schema_col(TIME, "T_SHIFT", "INT");
+		print_json_schema_col(TIME, "T_SHIFT", "STRING");
 		print_json_schema_col(TIME, "T_SUB_SHIFT", "STRING");
 		print_json_schema_end(TIME, "T_MEAL_TIME", "STRING");
 	}

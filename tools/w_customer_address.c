@@ -125,21 +125,22 @@ int pr_w_customer_address(void *row)
 	// print schema out to file
 	if (SCHEMA_W < 1)
 	{
-
+		//These columns are very different from above! They have been matched to the spec doc instead, so that the queries will work.
+		//Look at the table in TPC-DS_v2.10.1.pdf
 		print_json_schema_start(CUSTOMER_ADDRESS);
 		print_json_schema_col(CUSTOMER_ADDRESS, "CA_ADDRESS_SK", "STRING");
 		print_json_schema_col(CUSTOMER_ADDRESS, "CA_ADDRESS_ID", "STRING");
 
-		print_json_schema_col(CUSTOMER_ADDRESS, "CA_ADDRESS_STREET_NUM", "INT");
-		print_json_schema_col(CUSTOMER_ADDRESS, "CA_ADDRESS_STREET_NAME1", "STRING");
-		print_json_schema_col(CUSTOMER_ADDRESS, "CA_ADDRESS_STREET_TYPE", "STRING");
-		print_json_schema_col(CUSTOMER_ADDRESS, "CA_ADDRESS_SUITE_NUM", "STRING");
-		print_json_schema_col(CUSTOMER_ADDRESS, "CA_ADDRESS_CITY", "STRING");
-		print_json_schema_col(CUSTOMER_ADDRESS, "CA_ADDRESS_COUNTY", "STRING");
-		print_json_schema_col(CUSTOMER_ADDRESS, "CA_ADDRESS_STATE", "STRING");
-		print_json_schema_col(CUSTOMER_ADDRESS, "CA_ADDRESS_ZIP", "STRING");
-		print_json_schema_col(CUSTOMER_ADDRESS, "CA_ADDRESS_COUNTRY", "STRING");
-		print_json_schema_col(CUSTOMER_ADDRESS, "CA_ADDRESS_GMT_OFFSET", "INT");
+		print_json_schema_col(CUSTOMER_ADDRESS, "CA_STREET_NUMBER", "STRING");
+		print_json_schema_col(CUSTOMER_ADDRESS, "CA_STREET_NAME", "STRING");
+		print_json_schema_col(CUSTOMER_ADDRESS, "CA_STREET_TYPE", "STRING");
+		print_json_schema_col(CUSTOMER_ADDRESS, "CA_SUITE_NUMBER", "STRING");
+		print_json_schema_col(CUSTOMER_ADDRESS, "CA_CITY", "STRING");
+		print_json_schema_col(CUSTOMER_ADDRESS, "CA_COUNTY", "STRING");
+		print_json_schema_col(CUSTOMER_ADDRESS, "CA_STATE", "STRING");
+		print_json_schema_col(CUSTOMER_ADDRESS, "CA_ZIP", "STRING");
+		print_json_schema_col(CUSTOMER_ADDRESS, "CA_COUNTRY", "STRING");
+		print_json_schema_col(CUSTOMER_ADDRESS, "CA_GMT_OFFSET", "DECIMAL (5,2)");
 		print_json_schema_end(CUSTOMER_ADDRESS, "CA_LOCATION_TYPE", "STRING");
 	}
 	SCHEMA_W = 1;

@@ -194,6 +194,8 @@ int pr_w_web_returns(void *row)
 	// print schema out to file
 	if (SCHEMA_W < 1)
 	{
+		//These columns are all very diffrent from above! They have been matched to the spec doc instead, so that the queries will work.
+		//Look at the table in TPC-DS_v2.10.1.pdf
 		print_json_schema_start(WEB_RETURNS);
 		print_json_schema_col(WEB_RETURNS, "WR_RETURNED_DATE_SK", "STRING");
 		print_json_schema_col(WEB_RETURNS, "WR_RETURNED_TIME_SK", "STRING");
@@ -209,16 +211,16 @@ int pr_w_web_returns(void *row)
 		print_json_schema_col(WEB_RETURNS, "WR_WEB_PAGE_SK", "STRING");
 		print_json_schema_col(WEB_RETURNS, "WR_REASON_SK", "STRING");
 		print_json_schema_col(WEB_RETURNS, "WR_ORDER_NUMBER", "STRING");
-		print_json_schema_col(WEB_RETURNS, "WR_PRICING_QUANTITY", "INT");
-		print_json_schema_col(WEB_RETURNS, "WR_PRICING_NET_PAID", "DECIMAL (7,2)");
-		print_json_schema_col(WEB_RETURNS, "WR_PRICING_EXT_TAX", "DECIMAL (7,2)");
-		print_json_schema_col(WEB_RETURNS, "WR_PRICING_NET_PAID_INC_TAX", "DECIMAL (7,2)");
-		print_json_schema_col(WEB_RETURNS, "WR_PRICING_FEE", "DECIMAL (7,2)");
-		print_json_schema_col(WEB_RETURNS, "WR_PRICING_EXT_SHIP_COST", "DECIMAL (7,2)");
-		print_json_schema_col(WEB_RETURNS, "WR_PRICING_REFUNDED_CASH", "DECIMAL (7,2)");
-		print_json_schema_col(WEB_RETURNS, "WR_PRICING_REVERSED_CHARGE", "DECIMAL (7,2)");
-		print_json_schema_col(WEB_RETURNS, "WR_PRICING_STORE_CREDIT", "DECIMAL (7,2)");
-		print_json_schema_end(WEB_RETURNS, "WR_PRICING_NET_LOSS", "DECIMAL (7,2)");
+		print_json_schema_col(WEB_RETURNS, "WR_RETURN_QUANTITY", "INT");
+		print_json_schema_col(WEB_RETURNS, "WR_RETURN_AMT", "DECIMAL (7,2)");
+		print_json_schema_col(WEB_RETURNS, "WR_RETURN_TAX", "DECIMAL (7,2)");
+		print_json_schema_col(WEB_RETURNS, "WR_RETURN_NET_PAID_INC_TAX", "DECIMAL (7,2)");
+		print_json_schema_col(WEB_RETURNS, "WR_FEE", "DECIMAL (7,2)");
+		print_json_schema_col(WEB_RETURNS, "WR_RETURN_SHIP_COST", "DECIMAL (7,2)");
+		print_json_schema_col(WEB_RETURNS, "WR_REFUNDED_CASH", "DECIMAL (7,2)");
+		print_json_schema_col(WEB_RETURNS, "WR_REVERSED_CHARGE", "DECIMAL (7,2)");
+		print_json_schema_col(WEB_RETURNS, "WR_ACCOUNT_CREDIT", "DECIMAL (7,2)");
+		print_json_schema_end(WEB_RETURNS, "WR_NET_LOSS", "DECIMAL (7,2)");
 	}
 	SCHEMA_W = 1;
 

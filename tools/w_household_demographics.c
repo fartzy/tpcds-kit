@@ -120,9 +120,11 @@ int pr_w_household_demographics(void *row)
 	// print schema out to file
 	if (SCHEMA_W < 1)
 	{
+		//These columns could be very different from above! They have been matched to the spec doc instead, so that the queries will work.
+		//Look at the table in TPC-DS_v2.10.1.pdf
 		print_json_schema_start(HOUSEHOLD_DEMOGRAPHICS);
 		print_json_schema_col(HOUSEHOLD_DEMOGRAPHICS, "HD_DEMO_SK", "STRING");
-		print_json_schema_col(HOUSEHOLD_DEMOGRAPHICS, "HD_INCOME_BAND_ID", "STRING");
+		print_json_schema_col(HOUSEHOLD_DEMOGRAPHICS, "HD_INCOME_BAND_SK", "STRING");
 		print_json_schema_col(HOUSEHOLD_DEMOGRAPHICS, "HD_BUY_POTENTIAL", "STRING");
 		print_json_schema_col(HOUSEHOLD_DEMOGRAPHICS, "HD_DEP_COUNT", "INT");
 		print_json_schema_end(HOUSEHOLD_DEMOGRAPHICS, "HD_VEHICLE_COUNT", "INT");

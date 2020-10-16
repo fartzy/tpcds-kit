@@ -332,7 +332,8 @@ int pr_w_catalog_sales(void *row)
 	// print schema out to file
 	if (SCHEMA_W < 1)
 	{
-
+		//These columns are all very diffrent from above! They have been matched to the spec doc instead, so that the queries will work.
+		//Look at the table in TPC-DS_v2.10.1.pdf
 		print_json_schema_start(CATALOG_SALES);
 		print_json_schema_col(CATALOG_SALES, "CS_SOLD_DATE_SK", "STRING");
 		print_json_schema_col(CATALOG_SALES, "CS_SOLD_TIME_SK", "STRING");
@@ -352,22 +353,22 @@ int pr_w_catalog_sales(void *row)
 		print_json_schema_col(CATALOG_SALES, "CS_SOLD_ITEM_SK", "STRING");
 		print_json_schema_col(CATALOG_SALES, "CS_PROMO_SK", "STRING");
 		print_json_schema_col(CATALOG_SALES, "CS_ORDER_NUMBER", "STRING");
-		print_json_schema_col(CATALOG_SALES, "CS_PRICING_QUANTITY", "INT");
-		print_json_schema_col(CATALOG_SALES, "CS_PRICING_WHOLESALE_COST", "DECIMAL (7,2)");
-		print_json_schema_col(CATALOG_SALES, "CS_PRICING_LIST_PRICE", "DECIMAL (7,2)");
-		print_json_schema_col(CATALOG_SALES, "CS_PRICING_SALES_PRICE", "DECIMAL (7,2)");
-		print_json_schema_col(CATALOG_SALES, "CS_PRICING_EXT_DISCOUNT_AMOUNT", "DECIMAL (7,2)");
-		print_json_schema_col(CATALOG_SALES, "CS_PRICING_EXT_SALES_PRICE", "DECIMAL (7,2)");
-		print_json_schema_col(CATALOG_SALES, "CS_PRICING_EXT_WHOLESALE_COST", "DECIMAL (7,2)");
-		print_json_schema_col(CATALOG_SALES, "CS_PRICING_EXT_LIST_PRICE", "DECIMAL (7,2)");
-		print_json_schema_end(CATALOG_SALES, "CS_PRICING_EXT_TAX", "DECIMAL (7,2)");
-		print_json_schema_col(CATALOG_SALES, "CS_PRICING_COUPON_AMT", "DECIMAL (7,2)");
-		print_json_schema_col(CATALOG_SALES, "CS_PRICING_EXT_SHIP_COST", "DECIMAL (7,2)");
-		print_json_schema_col(CATALOG_SALES, "WS_PRICING_NET_PAID", "DECIMAL (7,2)");
-		print_json_schema_col(CATALOG_SALES, "WS_PRICING_NET_PAID_INC_TAX", "DECIMAL (7,2)");
-		print_json_schema_col(CATALOG_SALES, "WS_PRICING_NET_PAID_INC_SHIP", "DECIMAL (7,2)");
-		print_json_schema_col(CATALOG_SALES, "WS_PRICING_NET_PAID_INC_SHIP_TAX", "DECIMAL (7,2)");
-		print_json_schema_end(CATALOG_SALES, "WS_PRICING_NET_PROFIT", "DECIMAL (7,2)");
+		print_json_schema_col(CATALOG_SALES, "CS_QUANTITY", "INT");
+		print_json_schema_col(CATALOG_SALES, "CS_WHOLESALE_COST", "DECIMAL (7,2)");
+		print_json_schema_col(CATALOG_SALES, "CS_LIST_PRICE", "DECIMAL (7,2)");
+		print_json_schema_col(CATALOG_SALES, "CS_SALES_PRICE", "DECIMAL (7,2)");
+		print_json_schema_col(CATALOG_SALES, "CS_EXT_DISCOUNT_AMT", "DECIMAL (7,2)");
+		print_json_schema_col(CATALOG_SALES, "CS_EXT_SALES_PRICE", "DECIMAL (7,2)");
+		print_json_schema_col(CATALOG_SALES, "CS_EXT_WHOLESALE_COST", "DECIMAL (7,2)");
+		print_json_schema_col(CATALOG_SALES, "CS_EXT_LIST_PRICE", "DECIMAL (7,2)");
+		print_json_schema_col(CATALOG_SALES, "CS_EXT_TAX", "DECIMAL (7,2)");
+		print_json_schema_col(CATALOG_SALES, "CS_COUPON_AMT", "DECIMAL (7,2)");
+		print_json_schema_col(CATALOG_SALES, "CS_EXT_SHIP_COST", "DECIMAL (7,2)");
+		print_json_schema_col(CATALOG_SALES, "CS_NET_PAID", "DECIMAL (7,2)");
+		print_json_schema_col(CATALOG_SALES, "CS_NET_PAID_INC_TAX", "DECIMAL (7,2)");
+		print_json_schema_col(CATALOG_SALES, "CS_NET_PAID_INC_SHIP", "DECIMAL (7,2)");
+		print_json_schema_col(CATALOG_SALES, "CS_NET_PAID_INC_SHIP_TAX", "DECIMAL (7,2)");
+		print_json_schema_end(CATALOG_SALES, "CS_NET_PROFIT", "DECIMAL (7,2)");
 	}
 	SCHEMA_W = 1;
 

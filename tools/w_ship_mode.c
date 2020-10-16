@@ -128,6 +128,8 @@ int pr_w_ship_mode(void *pSrc)
 	// print schema out to file
 	if (SCHEMA_W < 1)
 	{
+		//These columns could be very different from above! They have been matched to the spec doc instead, so that the queries will work.
+		//Look at the table in TPC-DS_v2.10.1.pdf
 		print_json_schema_start(SHIP_MODE);
 		print_json_schema_col(SHIP_MODE, "SM_SHIP_MODE_SK", "STRING");
 		print_json_schema_col(SHIP_MODE, "SM_SHIP_MODE_ID", "STRING");

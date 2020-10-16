@@ -241,34 +241,35 @@ int pr_w_web_site(void *row)
 	// print schema out to file
 	if (SCHEMA_W < 1)
 	{
+		//These columns could be very different from above! They have been matched to the spec doc instead, so that the queries will work.
+		//Look at the table in TPC-DS_v2.10.1.pdf
 		print_json_schema_start(WEB_SITE);
 		print_json_schema_col(WEB_SITE, "WEB_SITE_SK", "STRING");
 		print_json_schema_col(WEB_SITE, "WEB_SITE_ID", "STRING");
-		print_json_schema_col(WEB_SITE, "WEB_REC_START_DATE_ID", "DATE");
-		print_json_schema_col(WEB_SITE, "WEB_REC_END_DATE_ID", "DATE");
-		print_json_schema_col(WEB_SITE, "WEB_CLOSED_DATE_ID", "STRING");
+		print_json_schema_col(WEB_SITE, "WEB_REC_START_DATE", "DATE");
+		print_json_schema_col(WEB_SITE, "WEB_REC_END_DATE", "DATE");
 		print_json_schema_col(WEB_SITE, "WEB_NAME", "STRING");
-		print_json_schema_col(WEB_SITE, "WEB_OPEN_DATE", "STRING");
-		print_json_schema_col(WEB_SITE, "WEB_CLOSE_DATE", "STRING");
+		print_json_schema_col(WEB_SITE, "WEB_OPEN_DATE_SK", "STRING");
+		print_json_schema_col(WEB_SITE, "WEB_CLOSE_DATE_SK", "STRING");
 		print_json_schema_col(WEB_SITE, "WEB_CLASS", "STRING");
 		print_json_schema_col(WEB_SITE, "WEB_MANAGER", "STRING");
 		print_json_schema_col(WEB_SITE, "WEB_MARKET_ID", "INT");
-		print_json_schema_col(WEB_SITE, "WEB_MARKET_CLASS", "STRING");
-		print_json_schema_col(WEB_SITE, "WEB_MARKET_DESC", "STRING");
-		print_json_schema_col(WEB_SITE, "WEB_MARKET_MANAGER", "STRING");
+		print_json_schema_col(WEB_SITE, "WEB_MKT_CLASS", "STRING");
+		print_json_schema_col(WEB_SITE, "WEB_MKT_DESC", "STRING");
+		print_json_schema_col(WEB_SITE, "WEB_MKT_MANAGER", "STRING");
 		print_json_schema_col(WEB_SITE, "WEB_COMPANY_ID", "INT");
 		print_json_schema_col(WEB_SITE, "WEB_COMPANY_NAME", "STRING");
-		print_json_schema_col(WEB_SITE, "WEB_ADDRESS_STREET_NUM", "STRING");
-		print_json_schema_col(WEB_SITE, "WEB_ADDRESS_STREET_NAME1", "STRING");
-		print_json_schema_col(WEB_SITE, "WEB_ADDRESS_STREET_TYPE", "STRING");
-		print_json_schema_col(WEB_SITE, "WEB_ADDRESS_SUITE_NUM", "STRING");
-		print_json_schema_col(WEB_SITE, "WEB_ADDRESS_CITY", "STRING");
-		print_json_schema_col(WEB_SITE, "WEB_ADDRESS_COUNTY", "STRING");
-		print_json_schema_col(WEB_SITE, "WEB_ADDRESS_STATE", "STRING");
-		print_json_schema_col(WEB_SITE, "WEB_ADDRESS_ZIP", "STRING");
-		print_json_schema_col(WEB_SITE, "WEB_ADDRESS_COUNTRY", "STRING");
-		print_json_schema_col(WEB_SITE, "WEB_ADDRESS_GMT_OFFSET", "INT");
-		print_json_schema_end(WEB_SITE, "WEB_TAX_PERCENTAGE", "DECIMAL (7,2)");
+		print_json_schema_col(WEB_SITE, "WEB_STREET_NUMBER", "STRING");
+		print_json_schema_col(WEB_SITE, "WEB_STREET_NAME", "STRING");
+		print_json_schema_col(WEB_SITE, "WEB_STREET_TYPE", "STRING");
+		print_json_schema_col(WEB_SITE, "WEB_SUITE_NUMBER", "STRING");
+		print_json_schema_col(WEB_SITE, "WEB_CITY", "STRING");
+		print_json_schema_col(WEB_SITE, "WEB_COUNTY", "STRING");
+		print_json_schema_col(WEB_SITE, "WEB_STATE", "STRING");
+		print_json_schema_col(WEB_SITE, "WEB_ZIP", "STRING");
+		print_json_schema_col(WEB_SITE, "WEB_COUNTRY", "STRING");
+		print_json_schema_col(WEB_SITE, "WEB_GMT_OFFSET", "DECIMAL (5,2)");
+		print_json_schema_end(WEB_SITE, "WEB_TAX_PERCENTAGE", "DECIMAL (5,2)");
 	}
 	SCHEMA_W = 1;
 
