@@ -762,12 +762,12 @@ void print_json_schema_col(int tbl, char *colName, char *colType)
 }
 void print_json_schema_end(int tbl, char *colName, char *colType)
 {
+	char writebuf[256];
 	tdef *pTdef = getSimpleTdefsByNumber(tbl);
 
 	/* write buffer memory allocation */
 	size_t colNameLen = strlen(colName);
 	size_t colTypeLen = strlen(colType);
-	char *writebuf = malloc(colNameLen + colTypeLen + 6);
 
 	/* fill the write buffer */
 	strcpy(writebuf, "\"");
@@ -779,6 +779,5 @@ void print_json_schema_end(int tbl, char *colName, char *colType)
 	fputs(writebuf, fpSchemaOutfile);
 
 	fflush(fpSchemaOutfile);
-	free(writebuf);
 	SCHEMA_W = 0;
 }
