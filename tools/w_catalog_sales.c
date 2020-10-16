@@ -350,7 +350,7 @@ int pr_w_catalog_sales(void *row)
 		print_json_schema_col(CATALOG_SALES, "CS_CATALOG_PAGE_SK", "STRING");
 		print_json_schema_col(CATALOG_SALES, "CS_SHIP_MODE_SK", "STRING");
 		print_json_schema_col(CATALOG_SALES, "CS_WAREHOUSE_SK", "STRING");
-		print_json_schema_col(CATALOG_SALES, "CS_SOLD_ITEM_SK", "STRING");
+		print_json_schema_col(CATALOG_SALES, "CS_ITEM_SK", "STRING");
 		print_json_schema_col(CATALOG_SALES, "CS_PROMO_SK", "STRING");
 		print_json_schema_col(CATALOG_SALES, "CS_ORDER_NUMBER", "STRING");
 		print_json_schema_col(CATALOG_SALES, "CS_QUANTITY", "INT");
