@@ -58,6 +58,8 @@ make OS=MACOS
 
 Data generation is done via `dsdgen`.  See `dsdgen -help` for all options.  If you do not run `dsdgen` from the `tools/` directory then you will need to use the option `-DISTRIBUTIONS /.../tpcds-kit/tools/tpcds.idx`. The output directory (specified via the `-DIR` option) must exist prior to running `dsdgen`. 
 
+Generating scale factor of 10 on an AWS c5d.4xlarge instance took 6 hours and 55 minutes.
+
 ### Query generation
 
 Query generation is done via `dsqgen`.   See `dsqgen -help` for all options.
